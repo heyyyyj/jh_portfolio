@@ -1,13 +1,7 @@
 $(window).load(function(){
   $(window).scroll(function(){
       var wintop = $(window).scrollTop(), docheight = $('#wrap').height(),winheight = $(window).height();
-
-      console.log(wintop);
-
       var totalScroll = (wintop/(docheight-winheight))*100;
-
-      console.log("total scroll" + totalScroll);
-
       $(".progress-bar").css("width",totalScroll+"%");
   })
 });
@@ -95,11 +89,9 @@ $(document).ready(function() {
           
         var bottom_of_element = $(this).offset().top + $(this).outerHeight() / 4;
         var bottom_of_window = $(window).scrollTop() + $(window).height();
-        
         if( bottom_of_window > bottom_of_element ){
             $(this).animate({'opacity':'1'},1000);
         }
-        
       });
   });
 });
@@ -109,7 +101,6 @@ $(document).ready(function() {
           
           var bottom_of_element = $(this).offset().top + $(this).outerHeight() / 2;
           var bottom_of_window = $(window).scrollTop() + $(window).height();
-          
           if( bottom_of_window > bottom_of_element ){
               $(this).animate({'opacity':'1','margin-right':'0'},1600);
           }
