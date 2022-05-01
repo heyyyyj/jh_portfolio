@@ -1,0 +1,721 @@
+
+@font-face {
+    font-family: 'Jal_Onuel';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html{width:100%;font-size: 62.5%;}
+body{
+    background-color: whitesmoke;
+	height: 100%;/*600vh*/
+	width: 100%;
+	font-family:'Roboto';
+	text-align:center;
+	overflow-x: hidden;
+}
+h2{font-family: 'Jal_Onuel';}
+p{font-family: 'LeferiBaseType-RegularA';}
+#wrap{
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* progress bar */
+.progress-container{
+    left: 0;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 0;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+.progress-bar{
+    width: 0%;
+    float: left;
+    height: 100%;
+    z-index: 999;
+    max-width: 100%;
+    background-color: #ac31ac;
+    -webkit-transition: width .4s ease;
+    -o-transition: width .4s ease;
+    transition: width .4s ease;
+}
+
+.logo{
+	position: absolute;
+	top: 10px; left: 10px;
+}
+.logo>img{
+	width: 90px;
+}
+.list{
+	position: fixed;
+	top: 30px; right: 20px;
+}
+.list>a{
+	color: black;
+}
+.list>a>p{
+	font-size: 1.6rem;
+	line-height: 2rem;
+}
+.none{opacity: 0;}
+
+@media only screen and (max-width:768px) {
+
+	
+/* 이모티콘pop, title */
+  .flex {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+  }
+  .scene {
+	color: black;
+	font: 800 100%/1.2 "Nunito", sans-serif;
+	height: 100vh;
+	max-height: 100vh;
+  }
+  #container {
+	  color:#999;
+	  text-transform: uppercase;
+	  font-size:2rem;
+	  font-weight:bold;
+	  padding-top:200px;
+	  position:absolute;
+	  width:100%;
+	  bottom:45%;
+	  display:block;
+	  z-index: 1;
+  }
+  #flip {
+	  height:40px;
+	  overflow:hidden;
+  }
+  #flip > div > div {
+	  color:#000;
+	  padding:4px 12px;
+	  height:20px;
+	  margin-bottom:20px;
+	  display:inline-block;
+  }
+  #flip div:first-child {
+	  animation: show 6s linear infinite;
+  }
+  .confetti {
+	position: absolute;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	z-index: 0;
+  }
+  .confetti__item {
+	display: inline-block;
+	font-size: 2rem;
+	position: absolute;
+  }
+  
+  @keyframes show {
+	0% {margin-top:-120px;}
+	5% {margin-top:-80px;}
+	33% {margin-top:-80px;}
+	38% {margin-top:-40px;}
+	66% {margin-top:-40px;}
+	71% {margin-top:0px;}
+	99.99% {margin-top:0px;}
+	100% {margin-top:-120px;}
+  }
+  
+  /* SCROLL DOWN */
+  .scroll-down {
+	  position: fixed;
+	  bottom: 30px;
+	  left: 50%;
+	  transform: translate(-50%, 0);
+	  color: white;
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  font-size: 1.4rem;
+	  overflow: visible;
+	  text-shadow: 1px 1px 4px rgba(143, 33, 143, 0.8);
+  }
+  .scroll-down .arrow {
+	  position: relative;
+	  top: 0px;
+	  margin: 0 auto;
+	  width: 14px;
+	  height: 14px;
+	  filter: invert(1) drop-shadow(1px 1px 4px rgba(143, 33, 143, 0.8));
+	  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+	  background-size: contain;
+  }
+  
+  
+  /* main 내용 */
+  .fadein_wrap{
+	  width: 100%;
+	  margin: 0 auto;
+  }
+  .fadein_wrap h2{
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: 30px;
+	padding-top: 20px;
+  }
+  .fadein_wrap p{
+	  font-size: 1.2rem;
+	  line-height: 2.6rem;
+	  margin: 2rem;
+  }
+  .fadein_wrap img{
+	  margin: 20px 0;
+	  width: 50%;
+  }
+  .bg{
+	  width: 100%;
+	  background-color: white;
+  }
+  
+  .fadein1{
+	  opacity: 0;
+	  width: 100%;
+	  margin: 60px auto;
+  }
+  .more{
+	  background-color: #999;
+	  border-radius: 4px;
+	  padding: 6px 6px 4px 6px;
+	  transition: ease .2s;
+  }
+  .more a{
+	  font-size: 1.2rem;
+	  color: whitesmoke;
+  }
+  .more:hover{
+	  background-color: rgba(153, 153, 153, 0.555);
+	  cursor: pointer;
+  }
+  .right{
+	  margin-top: 0px;
+	  margin-right: -100px;
+	  padding-right: 10px;
+	  text-align: right;
+	}
+  .left{
+	  margin-left: -100px;
+	  padding-left: 10px;
+	  text-align: left;
+	}
+  
+  .left p{text-align: left;}
+  
+  .introduce{
+	  margin: 0 auto 60px auto;
+	  display: flex;
+	  justify-content: space-between;
+	  width: 90%;
+  }
+  .fadein3{
+	  opacity: 0;
+  }
+  .introduce>div>div>div{
+	  border-left: 3px solid #000;
+	  height: 100%;
+  }
+  .introduce>div>div>div{text-align: start;}
+  /* .introduce>div를 .fadein3으로 하면 .list내용에도 영향받음 */
+  
+	#list{
+		margin: 0 auto;
+		width: 90%;
+		display: flex;
+	}
+	#list>div>a:first-child{
+		font-size: 0px;
+	}
+	#list p{text-align: left;margin-top: -10px;}
+	#list img{
+		width: 90%;
+		transition: ease .2s;
+	}
+	#list img:hover{
+		transform: scale(1.02);
+	}
+	#list .pdf{
+		color: #fff;
+		background-color: #999;
+		padding: 6px;
+		border-radius: 4px;
+	}
+  
+  
+  /**********************************************/
+  footer{
+	  margin: 120px;
+  }
+  footer>p{
+	  font-size: 1.4rem;
+	  margin-bottom: 60px;
+  }
+  .top>a{
+	  color: #000;
+	  font-size: 1.4rem;
+	  padding: 2px 6px;
+	  transition: ease .2s;
+  }
+  .top>a:hover{
+	  color: #999;
+  }
+}
+@media only screen and (max-width:1299px) and (min-width:769px){
+		
+  /* 이모티콘pop, title */
+  .flex {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+  }
+  .scene {
+	color: black;
+	font: 800 100%/1.2 "Nunito", sans-serif;
+	height: 100vh;
+	max-height: 100vh;
+  }
+  #container {
+	  color:#999;
+	  text-transform: uppercase;
+	  font-size:3rem;
+	  font-weight:bold;
+	  padding-top:200px;
+	  position:absolute;
+	  width:100%;
+	  bottom:45%;
+	  display:block;
+	  z-index: 1;
+  }
+  #flip {
+	  height:60px;
+	  overflow:hidden;
+  }
+  #flip > div > div {
+	  color:#000;
+	  padding:4px 12px;
+	  height:30px;
+	  margin-bottom:30px;
+	  display:inline-block;
+  }
+  #flip div:first-child {
+	  animation: show 6s linear infinite;
+  }
+  .confetti {
+	position: absolute;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	z-index: 0;
+  }
+  .confetti__item {
+	display: inline-block;
+	font-size: 3rem;
+	position: absolute;
+  }
+  
+  @keyframes show {
+	0% {margin-top:-180px;}
+	5% {margin-top:-120px;}
+	33% {margin-top:-120px;}
+	38% {margin-top:-60px;}
+	66% {margin-top:-60px;}
+	71% {margin-top:0px;}
+	99.99% {margin-top:0px;}
+	100% {margin-top:-180px;}
+  }
+  
+  /* SCROLL DOWN */
+  .scroll-down {
+	  position: fixed;
+	  bottom: 30px;
+	  left: 50%;
+	  transform: translate(-50%, 0);
+	  color: white;
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  font-size: 1.4rem;
+	  overflow: visible;
+	  text-shadow: 1px 1px 4px rgba(143, 33, 143, 0.8);
+  }
+  .scroll-down .arrow {
+	  position: relative;
+	  top: 0px;
+	  margin: 0 auto;
+	  width: 14px;
+	  height: 14px;
+	  filter: invert(1) drop-shadow(1px 1px 4px rgba(143, 33, 143, 0.8));
+	  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+	  background-size: contain;
+  }
+  
+  
+  /* main 내용 */
+  .fadein_wrap{
+	  width: 100%;
+	  margin: 0 auto;
+  }
+  .fadein_wrap h2{
+	font-size: 2.2rem;
+	font-weight: 500;
+	line-height: 40px;
+	padding-top: 20px;
+  }
+  .fadein_wrap p{
+	  font-size: 1.4rem;
+	  line-height: 2.6rem;
+	  margin: 2rem;
+  }
+  .fadein_wrap img{
+	  margin: 40px 0;
+	  width: 30%;
+  }
+  .bg{
+	  width: 100%;
+	  background-color: white;
+  }
+  
+  .fadein1{
+	  opacity: 0;
+	  width: 100%;
+	  margin: 100px auto;
+	  max-width: 800px;
+  }
+  .right>div>div{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	}
+  .more{
+	  background-color: #999;
+	  border-radius: 4px;
+	  padding: 6px 6px 4px 6px;
+	  transition: ease .2s;
+  }
+  .more a{
+	  font-size: 1.2rem;
+	  color: whitesmoke;
+  }
+  .more:hover{
+	  background-color: rgba(153, 153, 153, 0.555);
+	  cursor: pointer;
+  }
+  .right{
+	  margin-top: 0px;
+	  margin-right: -100px;
+	  padding-right: 50px;
+	  text-align: right;
+	}
+  .left{
+	  margin-left: -100px;
+	  padding-left: 50px;
+	  text-align: left;
+	}
+  
+  .left>div>div{
+	  display: flex;
+	  align-items: center;
+  }
+  .left>div>div>p{
+  }
+  .left p{text-align: left;}
+
+  .introduce{
+	  margin: 0 auto 60px auto;
+	  display: flex;
+	  justify-content: space-between;
+	  width: 70%;
+  }
+  .fadein3{
+	  opacity: 0;
+  }
+  .introduce>div>div>div{
+	  border-left: 3px solid #000;
+	  height: 100%;
+  }
+  .introduce>div>div>div{text-align: start;}
+  /* .introduce>div를 .fadein3으로 하면 .list내용에도 영향받음 */
+  
+	#list{
+		margin: 0 auto;
+		width: 90%;
+		display: flex;
+	}
+  	#list>div>a:first-child{
+		font-size: 0px;
+	}
+	#list p{text-align: left;margin-top: -10px;}
+	#list img{
+		width: 90%;
+		transition: ease .2s;
+	}
+	#list img:hover{
+		transform: scale(1.02);
+	}
+	#list .pdf{
+		color: #fff;
+		background-color: #999;
+		padding: 6px;
+		border-radius: 4px;
+  }
+  
+  
+  /**********************************************/
+  footer{
+	  margin: 120px;
+  }
+  footer>p{
+	  font-size: 1.4rem;
+	  margin-bottom: 60px;
+  }
+  .top>a{
+	  color: #000;
+	  font-size: 1.4rem;
+	  padding: 2px 6px;
+	  transition: ease .2s;
+  }
+  .top>a:hover{
+	  color: #999;
+  }
+}
+
+@media only screen and (min-width:1300px){
+
+/* 이모티콘pop, title */
+.flex {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+  }
+  .scene {
+	color: black;
+	font: 800 100%/1.2 "Nunito", sans-serif;
+	height: 100vh;
+	max-height: 100vh;
+  }
+  #container {
+	  color:#999;
+	  text-transform: uppercase;
+	  font-size:6rem;
+	  font-weight:bold;
+	  padding-top:200px;
+	  position:absolute;
+	  width:100%;
+	  bottom:45%;
+	  display:block;
+	  z-index: 1;
+  }
+  #flip {
+	  height:80px;
+	  overflow:hidden;
+  }
+  #flip > div > div {
+	  color:#000;
+	  padding:4px 12px;
+	  height:45px;
+	  margin-bottom:45px;
+	  display:inline-block;
+  }
+  #flip div:first-child {
+	  animation: show 6s linear infinite;
+  }
+  .confetti {
+	position: absolute;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	z-index: 0;
+  }
+  .confetti__item {
+	display: inline-block;
+	font-size: 2rem;
+	position: absolute;
+  }
+  
+  @keyframes show {
+	0% {margin-top:-270px;}
+	5% {margin-top:-180px;}
+	33% {margin-top:-180px;}
+	38% {margin-top:-90px;}
+	66% {margin-top:-90px;}
+	71% {margin-top:0px;}
+	99.99% {margin-top:0px;}
+	100% {margin-top:-270px;}
+  }
+  
+  /* SCROLL DOWN */
+  .scroll-down {
+	  position: fixed;
+	  bottom: 30px;
+	  left: 50%;
+	  transform: translate(-50%, 0);
+	  color: white;
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  font-size: 1.6rem;
+	  overflow: visible;
+	  text-shadow: 1px 1px 4px rgba(143, 33, 143, 0.8);
+  }
+  .scroll-down .arrow {
+	  position: relative;
+	  top: 0px;
+	  margin: 0 auto;
+	  width: 18px;
+	  height: 18px;
+	  filter: invert(1) drop-shadow(1px 1px 4px rgba(143, 33, 143, 0.8));
+	  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+	  background-size: contain;
+  }
+  
+  
+  /* main 내용 */
+  .fadein_wrap{
+	  width: 100%;
+	  margin: 0 auto;
+  }
+  .fadein_wrap h2{
+	font-size: 3.8rem;
+	font-weight: 500;
+	line-height: 60px;
+	padding-top: 20px;
+  }
+  .fadein_wrap p{
+	  font-size: 1.4rem;
+	  line-height: 2.6rem;
+	  margin: 2rem;
+  }
+  .fadein_wrap img{
+	  margin: 40px 0;
+	  width: 30%;
+  }
+  .bg{
+	  width: 100%;
+	  background-color: white;
+  }
+  
+  .fadein1{
+	  opacity: 0;
+	  width: 100%;
+	  max-width: 1200px;
+	  margin: 200px auto;
+  }
+  .right>div>div{
+	  display: flex;
+	  justify-content: flex-end;
+	  align-items: center;
+  }
+  .more{
+	  background-color: #999;
+	  border-radius: 4px;
+	  padding: 6px 6px 4px 6px;
+	  transition: ease .2s;
+  }
+  .more a{
+	  font-size: 1.2rem;
+	  color: whitesmoke;
+  }
+  .more:hover{
+	  background-color: rgba(153, 153, 153, 0.555);
+	  cursor: pointer;
+  }
+  .right{
+	  margin-top: 0px;
+	margin-right: -200px;
+	padding-right: 300px;
+	text-align: right;
+}
+  .left{
+	  margin-left: -200px;
+	  padding-left: 300px;
+	  text-align: left;
+	}
+  
+  .left>div>div{
+	  display: flex;
+	  align-items: center;
+  }
+  .left p{text-align: left;}
+  
+  .introduce{
+	  margin: 0 auto 60px auto;
+	  display: flex;
+	  justify-content: space-between;
+	  width: 70%;
+	  max-width: 1200px;
+  }
+  .fadein3{
+	  opacity: 0;
+  }
+  .introduce>div>div>div{
+	  border-left: 3px solid #000;
+	  height: 100%;
+  }
+  .introduce>div>div>div{text-align: start;}
+  /* .introduce>div를 .fadein3으로 하면 .list내용에도 영향받음 */
+  
+  #list{
+	  margin: 0 auto;
+	  width: 70%;
+	  display: flex;
+	  justify-content: space-between;
+  }
+  #list>div>a:first-child{
+	  font-size: 0px;
+  }
+  #list p{text-align: left;margin-top: -10px;padding-left: 20px;}
+  #list img{
+	  width: 90%;
+	  transition: ease .2s;
+  }
+  #list img:hover{
+	  transform: scale(1.02);
+  }
+  #list .pdf{
+	  color: #fff;
+	  background-color: #999;
+	  padding: 6px;
+	  border-radius: 4px;
+}
+
+  /**********************************************/
+  footer{
+	  margin: 200px;
+  }
+  footer>p{
+	  font-size: 1.8rem;
+	  margin-bottom: 60px;
+  }
+  .top>a{
+	  color: #000;
+	  font-size: 2rem;
+	  padding: 2px 6px;
+	  transition: ease .2s;
+  }
+  .top>a:hover{
+	  color: #999;
+  }
+}
+
+
