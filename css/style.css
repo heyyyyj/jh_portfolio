@@ -617,7 +617,7 @@ p{font-family: 'LeferiBaseType-RegularA';}
   .fadein1{
 	  opacity: 0;
 	  width: 100%;
-	  max-width: 1800px;
+	  max-width: 1600px;
 	  margin: 200px auto;
   }
   .right>div>div{
@@ -642,12 +642,12 @@ p{font-family: 'LeferiBaseType-RegularA';}
   .right{
 	  margin-top: 0px;
 	margin-right: -200px;
-	padding-right: 300px;
+	padding-right: 200px;
 	text-align: right;
 }
   .left{
 	  margin-left: -200px;
-	  padding-left: 300px;
+	  padding-left: 200px;
 	  text-align: left;
 	}
   
