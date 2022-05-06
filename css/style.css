@@ -67,7 +67,7 @@ p{font-family: 'LeferiBaseType-RegularA';}
 	top: 30px; right: 20px;
 }
 .list>a{
-	color: black;
+	color: #000;
 }
 .list>a>p{
 	font-size: 1.6rem;
